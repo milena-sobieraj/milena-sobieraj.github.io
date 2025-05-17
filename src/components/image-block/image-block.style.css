@@ -1,0 +1,43 @@
+img {
+    min-width: 1rem;
+    min-height: 1rem;
+}
+
+.image-block {
+    position: relative;
+    min-height: 1rem;
+    min-width: 1rem;
+    max-width: fit-content;
+    padding: 60px 45px 60px 45px;
+}
+.image-block::after {
+    content: "Zobacz więcej →";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--highlight);
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.image-block:hover::after {
+    opacity: 1;
+}
+
+
+.image-block-title {
+    font-size: 12px;
+    letter-spacing: .2rem;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--background-main);
+    padding-inline: 11px ;
+}

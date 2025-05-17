@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Jost} from "next/font/google";
 import "./globals.css";
+import {Navbar} from "@/components/navbar/navbar.component";
+import {Footer} from "@/components/footer/footer.component";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jost = Jost({
+  variable: "--jost-sans",
   subsets: ["latin"],
 });
 
@@ -25,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jost.variable} antialiased`}
       >
+      <Navbar />
         {children}
+      <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    height: 33px;
+    letter-spacing: 0.21em;
+    color: #57616D;
+    font-weight: 450;
+    transition: all 0.3s ease;
+}
+.primary:hover {
+    background: #F62DAE;
+    color: white;
+}
+.secondary:hover {
+    color: #F62DAE;
+}
+
+.full {
+    background: #F62DAE;
+    color: white;
+}
+.full:hover {
+    background: #313841;
+}
